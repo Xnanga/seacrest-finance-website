@@ -1,0 +1,51 @@
+
+// Stylesheet Resets
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Noto Sans", "Open Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+}
+
+// Colour Variables
+
+$color-primary: #304960;
+$color-secondary: #8CACD0;
+
+// Element Defaults
+
+a,
+a::before,
+a::after,
+a:link {
+    text-decoration: none;
+    border: none;
+    color: inherit;
+}
+
+button,
+button:active,
+button:link,
+button:active,
+button:focus,
+button:visited {
+    outline: none;
+}
+
+h2 {
+    font-size: 4rem;
+    color: $color-primary;
+}
+
+main {
+    height: 400rem;
+}

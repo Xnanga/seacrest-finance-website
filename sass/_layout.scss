@@ -1,0 +1,25 @@
+
+// Homepage Header Layout
+
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 13rem;
+    padding-top: 3rem;
+}
+
+.top-banner {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &__social-icons {
+        margin-right: 45rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 5rem;
+    }
+}

@@ -1,0 +1,202 @@
+
+// Reusable Components
+
+.social-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+}
+
+.body-icon {
+    fill: $color-secondary;
+    transition: transform .2s;
+
+    &:hover {
+        transform: translateY(-.75rem);
+        transition: transform .2s;
+    }
+    
+}
+
+.blue-btn {
+    cursor: pointer;
+    background-color: $color-primary;
+    border: none;
+    border-radius: .75rem;
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.5rem 3.5rem;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $color-secondary;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        background-color: $color-primary;
+        transform: scale(0.9);
+    }
+}
+
+// Homepage Header
+
+.header {
+
+    &__logo {
+        overflow: hidden;
+    }
+
+    &__logo-image {
+        width: 17rem;
+        margin-left: 17.5rem;
+    }
+
+    &__navigation {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+    }
+
+    &__navigation-list {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        width: 100%;
+    }
+    
+    &__navigation-parent-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        background-color: #fff;
+        border-radius: .75rem;
+        color: $color-primary;
+        padding: 0 4rem;
+        height: 6rem;
+        transition: all .2s;
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            background-color: $color-secondary;
+            color: #fff;
+            transition: all .2s;
+        }
+
+        &:active {
+            background-color: $color-primary;
+        }
+
+        &:hover .header__navigation-dropdown {
+            visibility: visible;
+            transition: all .2s;
+        }
+    }
+
+    &__navigation-dropdown-parent {
+        flex: 1;
+    }
+
+    &__navigation-dropdown {
+        visibility: hidden;
+        list-style-type: none;
+        margin-top: 3.8rem;
+
+        position: absolute;
+        top: 2rem;
+        left: 0;
+    }
+
+    &__navigation-child-item {
+        display: flex;
+        align-items: center;
+        background-color: $color-primary;
+        color: #fff;
+        padding: 3rem;
+        height: 6rem;
+        text-align: left;
+
+        &:hover {
+            background-color: $color-secondary;
+            transition: all .2s;
+        }
+    }
+}
+
+// Homepage Featured Image
+
+.featured-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 47rem;
+    background-image: url(../images/featured-image.jpg);
+    background-size: cover;
+    background-position: 50% 95%;
+
+     &__content {
+        margin-right: 36rem;
+        width: 60rem;
+        height: 35rem;
+        padding: 4rem 6rem;
+        background: rgba(255,255,255,0.6);
+        border-radius: .75rem;
+     }
+
+     &__heading {
+
+     }
+
+     &__button {
+         margin-top: 2rem;
+     }
+}
+
+// How It Works Section
+
+.how-it-works {
+    text-align: center;
+
+    &__heading {
+        padding: 5rem 0;
+    }
+
+    &__widgets {
+        width: 60%;
+        display: flex;
+        margin: 0 auto;
+
+        &--notepad {
+
+        }
+
+        &--phone {
+
+        }
+
+        &--tick {
+
+        }
+
+    }
+
+    &__widget-text {
+        padding: 3rem 6rem;
+    }
+
+    &__button {
+        margin-top: 5rem;
+    }
+
+}
+
+
+
+
+
