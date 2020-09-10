@@ -21,6 +21,13 @@ body {
 $color-primary: #304960;
 $color-secondary: #8CACD0;
 
+$whatsapp-green: #41C452;
+
+// Styling Variables
+
+$box-shadow-primary: 10px 10px 26px 0px rgba(0,0,0,0.75);
+$box-shadow-smaller: 6px 6px 10px 0px rgba(0,0,0,0.75);
+
 // Element Defaults
 
 a,
@@ -41,8 +48,17 @@ button:visited {
     outline: none;
 }
 
+p {
+    color: $color-primary;
+}
+
 h2 {
     font-size: 4rem;
+    color: $color-primary;
+}
+
+h3 {
+    font-size: 2.25rem;
     color: $color-primary;
 }
 
