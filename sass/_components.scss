@@ -5,6 +5,10 @@
     height: 2rem;
     width: 2rem;
     fill: $color-primary;
+
+    &:hover {
+        fill: $color-secondary;
+    }
 }
 
 .body-icon {
@@ -36,17 +40,24 @@
 
     &:active {
         background-color: $color-primary;
-        transform: scale(0.9);
+        transform: scale(1.025);
         box-shadow: $box-shadow-smaller;
     }
 }
 
 .chat-with-us-cta {
+    position: relative;
     display: flex;
     align-items: center;
 
     margin-top: 7.5rem;
     margin-bottom: 5rem;
+    transition: all;
+    backface-visibility: hidden;
+
+    &:hover > .chat-with-us-cta__icon-animation {
+        animation: pulse .75s;
+    }
 
     &__text {
         font-size: 2.25rem;
@@ -59,7 +70,17 @@
         height: 6rem;
         width: 6rem;
         fill: $whatsapp-green;
-        transition: transform .2s;
+    }
+
+    &__icon-animation {
+        position: absolute;
+        top: 0;
+        left: 17rem;
+        opacity: 0;
+
+        height: 6rem;
+        width: 6rem;
+        fill: $whatsapp-green;
     }   
 }
 
@@ -323,5 +344,128 @@
 
 }
 
+// Living Life Section
 
+.blue-small-one-row-section {
+    display: flex;
+    justify-content: center;
+
+    background-color: $color-secondary;
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+    }
+
+    &__content-left {
+        
+    }
+
+    &__content-right {
+
+    }
+    
+    &__photo {
+        border-radius: .5rem;
+        margin-top: 2.25rem;
+
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+}
+
+// Living Life Section
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary;
+
+    &__logo {
+
+    }
+
+    &__logo-image {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+
+    &__column {
+        width: 100%;
+        padding: 4rem;
+    }
+
+    &__column-header {
+        display: inline-block;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $color-primary;
+    }
+
+    &__column-list {
+        list-style-type: none;
+    }
+
+    &__column-list-item {
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__column-paragraph {
+
+    }
+
+    &__info {
+        width: 30%;
+        font-size: 1.25rem;
+    }
+
+    &__info-text {
+
+    }
+
+    &__info-icon {
+        fill: #000;
+    }
+
+    &__column-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__social-container {
+
+    }
+
+    &-social-icon {
+        width: 5rem;
+        height: 5rem;
+        fill: $color-primary;
+    }
+
+    &__copyright {
+
+    }
+
+    &__copyright-text {
+
+    }
+
+}
 

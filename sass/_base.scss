@@ -39,6 +39,10 @@ a:link {
     color: inherit;
 }
 
+main a:hover, footer a:hover {
+    color: $color-secondary;
+}
+
 button,
 button:active,
 button:link,
@@ -63,5 +67,5 @@ h3 {
 }
 
 main {
-    height: 400rem;
+
 }

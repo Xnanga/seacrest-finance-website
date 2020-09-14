@@ -18,6 +18,9 @@ a:link {
   border: none;
   color: inherit; }
 
+main a:hover, footer a:hover {
+  color: #8CACD0; }
+
 button,
 button:active,
 button:link,
@@ -37,8 +40,13 @@ h3 {
   font-size: 2.25rem;
   color: #304960; }
 
-main {
-  height: 400rem; }
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(2); } }
 
 header {
   display: flex;
@@ -59,10 +67,15 @@ header {
     justify-content: space-between;
     width: 5rem; }
 
+footer {
+  width: 100%; }
+
 .social-icon {
   height: 2rem;
   width: 2rem;
   fill: #304960; }
+  .social-icon:hover {
+    fill: #8CACD0; }
 
 .body-icon {
   fill: #8CACD0;
@@ -86,14 +99,19 @@ header {
     box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75); }
   .blue-btn:active {
     background-color: #304960;
-    transform: scale(0.9);
+    transform: scale(1.025);
     box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.75); }
 
 .chat-with-us-cta {
+  position: relative;
   display: flex;
   align-items: center;
   margin-top: 7.5rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  transition: all;
+  backface-visibility: hidden; }
+  .chat-with-us-cta:hover > .chat-with-us-cta__icon-animation {
+    animation: pulse .75s; }
   .chat-with-us-cta__text {
     font-size: 2.25rem;
     font-weight: 700;
@@ -102,8 +120,15 @@ header {
   .chat-with-us-cta__icon {
     height: 6rem;
     width: 6rem;
-    fill: #41C452;
-    transition: transform .2s; }
+    fill: #41C452; }
+  .chat-with-us-cta__icon-animation {
+    position: absolute;
+    top: 0;
+    left: 17rem;
+    opacity: 0;
+    height: 6rem;
+    width: 6rem;
+    fill: #41C452; }
 
 .header__logo {
   overflow: hidden; }
@@ -259,3 +284,57 @@ header {
       transform: scale(1.15); }
   .blue-one-row-section__button {
     margin: 5rem 0; }
+
+.blue-small-one-row-section {
+  display: flex;
+  justify-content: center;
+  background-color: #8CACD0; }
+  .blue-small-one-row-section__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%; }
+  .blue-small-one-row-section__photo {
+    border-radius: .5rem;
+    margin-top: 2.25rem;
+    transition: all .4s ease-in-out; }
+    .blue-small-one-row-section__photo:hover {
+      transform: scale(1.15); }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #304960; }
+  .footer__logo-image {
+    width: 75%;
+    margin: 0 auto; }
+  .footer__content {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 5rem; }
+  .footer__column {
+    width: 100%;
+    padding: 4rem; }
+  .footer__column-header {
+    display: inline-block;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #304960; }
+  .footer__column-list {
+    list-style-type: none; }
+  .footer__column-list-item:not(:last-child) {
+    margin-bottom: 2rem; }
+  .footer__info {
+    width: 30%;
+    font-size: 1.25rem; }
+  .footer__info-icon {
+    fill: #000; }
+  .footer__column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .footer-social-icon {
+    width: 5rem;
+    height: 5rem;
+    fill: #304960; }
