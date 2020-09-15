@@ -55,6 +55,10 @@
     transition: all;
     backface-visibility: hidden;
 
+    @media only screen and (max-width: $bp-medium) {
+        margin: 3rem 0;
+    }
+
     &:hover > .chat-with-us-cta__icon-animation {
         animation: pulse .75s;
     }
@@ -95,6 +99,10 @@
     &__logo-image {
         width: 17rem;
         margin-left: 17.5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-left: 6rem;
+        }
     }
 
     &__navigation {
@@ -185,6 +193,10 @@
     background-size: cover;
     background-position: 50% 95%;
 
+    @media only screen and (max-width: $bp-medium) {
+        height: 37rem;
+    }
+
      &__content {
         margin-right: 36rem;
         width: 60rem;
@@ -192,6 +204,15 @@
         padding: 4rem 6rem;
         background: rgba(255,255,255,0.6);
         border-radius: .75rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            margin-right: 7.5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-right: 2rem;
+            width: 50rem;
+        }
      }
 
      &__heading {
@@ -207,15 +228,36 @@
 
 .white-one-row-section {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    
 
     &__heading {
         margin: 5rem 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 3rem 0;
+        }
     }
 
     &__widgets {
         width: 60%;
         display: flex;
-        margin: 0 auto;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 75%;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+        }
 
         &--notepad {
 
@@ -233,10 +275,19 @@
 
     &__widget-text {
         padding: 3rem 6rem;
+
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 1.5rem 5rem;    
+        }
     }
 
     &__button {
         margin: 5rem 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 3rem 0;
+        }
     }
 
 }
@@ -252,6 +303,11 @@
         margin-top: 5rem;
         margin-bottom: 1rem;
         text-align: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 3rem;
+            margin-bottom: 0;
+        }
     }
 
     &__content {
@@ -259,6 +315,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 65%;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90%;
+        }
     }
 
     &__tile {
@@ -268,6 +328,10 @@
         align-items: center;
         width: 33.33333%;
         margin-top: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 0;
+        }
     }
 
     &__icon {
@@ -294,6 +358,10 @@
     &__heading {
         margin: 5rem 0;
         color: #fff;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 3rem 0;
+        }
     }
 
     &__content {
@@ -301,6 +369,15 @@
         align-items: center;
         justify-content: space-around;
         width: 70%;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90%;
+            justify-content: space-between;
+        }
     }
 
     &__content-left {
@@ -309,19 +386,31 @@
     }
 
     &__content-right {
-        //width: 50%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     &__paragraph {
         color: #fff;
         font-size: 2.25rem;
         margin-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
     }
 
     &__list {
         font-size: 1.75rem;
         line-height: 2.5;
         margin-left: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
 
         &-item {
 
@@ -332,6 +421,10 @@
         clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 14% 51%, 0% 0%);
         transition: all .4s ease-in-out;
 
+        @media only screen and (max-width: $bp-medium) {
+            width: 75%;
+        }
+
         &:hover {
             transform: scale(1.15);
         }
@@ -340,6 +433,10 @@
 
     &__button {
         margin: 5rem 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 3rem 0;
+        }
     }
 
 }
@@ -357,6 +454,10 @@
         justify-content: space-around;
         align-items: center;
         width: 70%;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 80%;
+        }
     }
 
     &__content-left {
@@ -364,7 +465,8 @@
     }
 
     &__content-right {
-
+        display: flex;
+        justify-content: flex-end;
     }
     
     &__photo {
@@ -373,6 +475,11 @@
 
         transition: all .4s ease-in-out;
 
+        @media only screen and (max-width: $bp-medium) {
+            width: 80%;
+            margin-top: 0;
+        }
+
         &:hover {
             transform: scale(1.15);
         }
@@ -380,39 +487,70 @@
 
 }
 
-// Living Life Section
+// Footer Section
 
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: $color-primary;
 
     &__logo {
 
     }
 
+    &__logo-link {
+        display: flex;
+        justify-content: center;
+    }
+
     &__logo-image {
         width: 75%;
-        margin: 0 auto;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 50%;
+        }
     }
 
     &__content {
         display: flex;
         justify-content: center;
+        align-items: space-around;
         width: 70%;
         margin-bottom: 5rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 80%;
+            margin-bottom: 4rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 95%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__column {
         width: 100%;
         padding: 4rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            padding: 2rem;
+            font-size: 1.25rem;
+        }
+
     }
 
     &__column-header {
         display: inline-block;
         margin-bottom: 2rem;
         border-bottom: 1px solid $color-primary;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.5rem;
+        }
+        
     }
 
     &__column-list {
@@ -423,6 +561,10 @@
 
         &:not(:last-child) {
             margin-bottom: 2rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -460,7 +602,11 @@
     }
 
     &__copyright {
+        padding-bottom: 1rem;
 
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1rem;
+        }
     }
 
     &__copyright-text {
