@@ -92,20 +92,39 @@
 
 .header {
 
+    @media only screen and (max-width: $bp-small) {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__logo {
         overflow: hidden;
+
+        @media only screen and (max-width: $bp-small) {
+            align-self: center;
+        }
     }
 
     &__logo-image {
         width: 17rem;
         margin-left: 17.5rem;
 
-        @media only screen and (max-width: $bp-medium) {
-            margin-left: 6rem;
+        @media only screen and (max-width: $bp-large) {
+            margin-left: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-left: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-left: 0;
+            width: 10rem;
         }
     }
 
     &__navigation {
+        display: flex;
         text-transform: uppercase;
         font-size: 1.4rem;
     }
@@ -115,6 +134,11 @@
         justify-content: space-around;
         list-style-type: none;
         width: 100%;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-wrap: wrap;
+            align-content: center;
+         }
     }
     
     &__navigation-parent-item {
@@ -129,6 +153,11 @@
         padding: 0 4rem;
         height: 6rem;
         transition: all .2s;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 2rem;
+            height: 3rem;
+         }
 
         &:not(:last-child) {
             margin-right: .5rem;
@@ -163,6 +192,10 @@
         position: absolute;
         top: 2rem;
         left: 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 1rem;
+        }
     }
 
     &__navigation-child-item {
@@ -173,6 +206,12 @@
         padding: 3rem;
         height: 6rem;
         text-align: left;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 1.5rem;
+            height: 4rem;
+            font-size: 1.2rem;
+        }
 
         &:hover {
             background-color: $color-secondary;
@@ -213,6 +252,11 @@
             margin-right: 2rem;
             width: 50rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-right: 0;
+            width: 30rem;
+        }
      }
 
      &__heading {
@@ -230,10 +274,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
-    
 
     &__heading {
         margin: 5rem 0;
@@ -255,8 +296,9 @@
             width: 85%;
         }
 
-        @media only screen and (max-width: $bp-medium) {
-            width: 100%;
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            width: 50%;
         }
 
         &--notepad {
@@ -264,11 +306,20 @@
         }
 
         &--phone {
-
+            
         }
 
         &--tick {
+            
+        }
 
+    }
+
+    &__widget-icon {
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 10rem;
+            width: 10rem;
         }
 
     }
@@ -276,10 +327,11 @@
     &__widget-text {
         padding: 3rem 6rem;
 
-
         @media only screen and (max-width: $bp-medium) {
-            padding: 1.5rem 5rem;    
+            padding: 1rem 2rem;
+            font-size: 1.33rem;
         }
+
     }
 
     &__button {
@@ -338,10 +390,19 @@
         height: 15rem;
         width: 15rem;
         padding: 0 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 8rem;
+            width: 8rem;
+            padding: 0 1.5rem;
+        }
     }
 
     &__subheading {
     
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
     }
 
 }
@@ -378,17 +439,31 @@
             width: 90%;
             justify-content: space-between;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+        }
     }
 
     &__content-left {
         width: 50%;
         align-self: stretch;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 80%;
+            align-self: center;
+        }
     }
 
     &__content-right {
         width: 50%;
         display: flex;
         justify-content: flex-end;
+
+        @media only screen and (max-width: $bp-medium) {
+            visibility: hidden;
+            display: none;
+        }
     }
 
     &__paragraph {
@@ -397,7 +472,7 @@
         margin-bottom: 4rem;
 
         @media only screen and (max-width: $bp-medium) {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-bottom: 3rem;
         }
     }
@@ -458,15 +533,28 @@
         @media only screen and (max-width: $bp-largest) {
             width: 80%;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 90%;
+        }
+        
     }
 
     &__content-left {
-        
+
+        @media only screen and (max-width: $bp-small) {
+            text-align: center;
+        }
     }
 
     &__content-right {
         display: flex;
         justify-content: flex-end;
+
+        @media only screen and (max-width: $bp-small) {
+            visibility: none;
+            display: none;
+        }
     }
     
     &__photo {
@@ -529,6 +617,11 @@
             width: 95%;
             margin-bottom: 2rem;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__column {
@@ -540,6 +633,13 @@
             font-size: 1.25rem;
         }
 
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 50%;
+        }
+
     }
 
     &__column-header {
@@ -549,6 +649,10 @@
 
         @media only screen and (max-width: $bp-medium) {
             font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            border-bottom: none;
         }
         
     }
@@ -589,6 +693,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        @media only screen and (max-width: $bp-small) {
+            align-items: center;
+        }
     }
 
     &__social-container {

@@ -6,6 +6,10 @@ header {
     justify-content: space-around;
     height: 13rem;
     padding-top: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding-top: 0;
+    }
 }
 
 .top-banner {
@@ -15,12 +19,20 @@ header {
     justify-content: flex-end;
     align-items: flex-end;
 
+    @media only screen and (max-width: $bp-small) {
+        justify-content: center;
+    }
+
     &__social-icons {
         margin-right: 20vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+        }
     }
 }
 
